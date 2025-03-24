@@ -20,15 +20,23 @@
 
 ### 2. 命令行传参
 
+启动服务
 ```bash
 mcp_server_memory.exe --port 8080 --memory-path ./memory.json
 ```
+
 ### 3. JSON配置启动
 通过管道传入JSON配置：
 
 ```bash
-echo '{"port": 8080, "memory_path": "./memory.json"}' | ./mcp_server_memory.exe
+echo '{"jsonrpc": "2.0","method": "start","id": 2,"params":{"port": 8080, "memory_path": "./memory.json"}}' | ./mcp_server_memory.exe
 ```
+
+获取帮助信息
+```bash
+echo '{"jsonrpc": "2.0","method": "help","id": 1}' | mcp_server_memory.exe
+```
+
 
 ## 配置项
 

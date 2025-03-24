@@ -37,6 +37,9 @@ echo '{"jsonrpc": "2.0","method": "start","id": 2,"params":{"port": 8080, "memor
 echo '{"jsonrpc": "2.0","method": "help","id": 1}' | mcp_server_memory.exe
 ```
 
+## 客户端接入
+
+[mcp_client.py](mcp_client.py) 是客户端接入示例，使用 [mcp](https://github.com/modelcontextprotocol/mcp) 库实现。
 
 ## 配置项
 

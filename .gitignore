@@ -1,3 +1,4 @@
 .DS_Store
 dist/config.json
 dist/memory.json
+/dist/logs

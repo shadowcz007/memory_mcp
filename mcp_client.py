@@ -53,6 +53,17 @@ async def run():
 
                     print("--------------------------------")
                     # 请求资源
+                    result = await session.read_resource("memory://short-story/all")
+                    # 格式化输出资源内容
+                    if result.contents:
+                        for content in result.contents:
+                            print(f"资源URI: {content.uri}")
+                            print(f"MIME类型: {content.mimeType}")
+                            print(f"内容: {content.text}")
+                    else:
+                        print("未找到资源内容")
+                    print("--------------------------------")
+                    # 请求资源
                     result = await session.read_resource("memory://short-story/草图")
                     # 格式化输出资源内容
                     if result.contents:

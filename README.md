@@ -4,7 +4,9 @@
 
 ## 功能特点
 - 支持多种启动方式：交互式、命令行、JSON配置
+- 生成符合知识图谱知识背景的短故事（实验）（查看 `mcp_client.py` 中的 `handle_sampling_message` 函数）
 - 完整的知识图谱管理功能
+- 支持MCP协议:tools、resource、sampling
 - 自动数据持久化
 - 灵活的配置选项
 
@@ -63,6 +65,11 @@ echo '{"jsonrpc": "2.0","method": "help","id": 1}' | mcp_server_memory.exe
 
 ### 图谱操作
 - `read_graph`: 读取完整图谱
+
+### Resource 接口
+- `memory://short-story/all`: 获取所有基于知识图谱生成的短故事
+- `memory://short-story/{topic}`: 获取指定主题的短故事
+  - `topic`: 故事主题关键词，例如 "科技"、"历史" 等
 
 ## 数据持久化
 - 数据以JSON行格式存储
